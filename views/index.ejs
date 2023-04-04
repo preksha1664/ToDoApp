@@ -1,0 +1,28 @@
+<html>
+<head> 
+<title> ToDo App </title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+ <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1> <%=  KindOfDay %></h1>
+<div class="container">
+<h3>To Do List</h3>
+<form action ="/addtask" method="POST" autocomplete="off">
+
+<input type="text" name="newtask" placeholder="Add task">
+<button> Add</button>
+
+
+<% for( var i = 1; i < task.length; i++){ %>
+    <li style="list-style-type: none;"><input id="List1" type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </li>
+<% } %>
+ 
+<button formaction="/removetask" type="submit" id="top"> Remove </button>
+</form>
+
+</div>
+
+</body>
+</html>
